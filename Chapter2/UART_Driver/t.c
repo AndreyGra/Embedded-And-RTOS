@@ -1,4 +1,4 @@
-#include "string.c"
+#include <string.h>
 #include "uart.c"
 
 int v[] = {1,2,3,4,5,6,7,8,9,10};
@@ -16,11 +16,11 @@ int main(){
 
     while(1){
         uprints(up, "       ");
-        ugets(up, string);
+        upgets(up, string);
         uprints(up, string);
         uprints(up, "\n\r");
 
-        if (strcomp(string,"end") == 0){
+        if (strcmp(string,"end") == 0){
             break;
         }
     }
