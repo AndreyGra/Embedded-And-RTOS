@@ -1,4 +1,4 @@
-#include <string.h>
+#include "string.c"
 #include "uart.c"
 
 int v[] = {1,2,3,4,5,6,7,8,9,10};
@@ -15,8 +15,8 @@ int main(){
     uprints(up, "Enter lines from serial terminal 0\n\r");
 
     while(1){
-        uprints(up, "       ");
         upgets(up, string);
+        uprints(up, "       ");
         uprints(up, string);
         uprints(up, "\n\r");
 
@@ -28,7 +28,7 @@ int main(){
     uprints(up, "Computer sum of array: \n\r");
 
     sum = 0;
-    for (int i = 0; i < 10; i++){
+    for (i = 0; i < 10; i++){
         sum += v[i];
     }
 
